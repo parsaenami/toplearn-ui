@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Vazir;
+  src: url("../font/Vazir-FD-WOL.ttf");
+}
+
+@keyframes zero-to-100 {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 2rem);
+  }
+}
+
+* {
+  font-family: Vazir;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+#landing {
+  padding: 25px 0;
+  background: url(../img/landing.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#landing-container {
+  width: 93%;
+}
+
+.nav-link,
+.nav-item {
+  color: #ffffff;
+  font-size: 14px;
+  transition: ease 0.4s;
+  -webkit-transition: ease 0.4s;
+  -moz-transition: ease 0.4s;
+  -ms-transition: ease 0.4s;
+  -o-transition: ease 0.4s;
+}
+
+.nav-link:hover {
+  color: #00b3e9;
+}
+
+.nav-link.hov:hover {
+  color: #ffffff;
+}
+
+.nav-link.hov::before {
+  position: absolute;
+  right: 0;
+  top: -7px;
+  width: 0;
+  height: 2px;
+  margin: 0 1rem;
+  content: "";
+  box-shadow: 0 0 7px #00bffe;
+  -moz-box-shadow: 0 0 7px #00bffe;
+  -webkit-box-shadow: 0 0 7px #00bffe;
+  background-color: #00bffe;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  transition: ease 0.2s;
+  -webkit-transition: ease 0.2s;
+  -moz-transition: ease 0.2s;
+  -ms-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+}
+
+.nav-link.hov:hover::before {
+  /* width: 100%; */
+  width: calc(100% - 2rem);
+  animation: zero-to-100 0.4s normal;
+}
+
+#landing-content {
+  width: 600px;
+  padding: 45px 0 70px;
+}
+
+#title-1 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+#title-2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+#landing-search {
+  width: 100%;
+  display: block;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  padding: 10px;
+  margin: 45px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+#landing-search-container {
+  background-color: #ffffff;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  padding: 10px;
+}
+
+.search-icon {
+  color: #00b3e9;
+  transition: ease 0.2s;
+  -webkit-transition: ease 0.2s;
+  -moz-transition: ease 0.2s;
+  -ms-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+}
+
+.search-icon:hover {
+  color: initial;
+}

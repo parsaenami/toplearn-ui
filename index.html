@@ -1,18 +1,136 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/reset.local.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
     <script src="./assets/js/sample.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
 
     <title>TopLearn</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="landing" class="d-flex justify-content-center">
+      <div
+        id="landing-container"
+        class="d-flex flex-column justify-content-center align-items-center"
+        style="max-width: 1170px;"
+      >
+        <div
+          id="landing-header"
+          class="flex-fill d-flex flex-row align-items-center w-100 pb-4"
+        >
+          <nav class="navbar navbar-expand-sm p-0 w-100">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./assets/img/logo.svg"
+                alt="Logo"
+                style="width: 75px;"
+              />
+            </a>
+            <a class="nav-link position-relative hov" href="#">آخرین دوره‌ها</a>
+            <a class="nav-link position-relative hov" href="#">معرفی مدرسین</a>
+            <a class="nav-link position-relative hov" href="#">بلاگ</a>
+            <a class="nav-link position-relative hov" href="#">پرسش و پاسخ</a>
+            <a class="nav-link position-relative hov" href="#"
+              >همکاری با تاپ لرن</a
+            >
+            <a class="nav-link position-relative hov" href="#">تماس با ما</a>
+            <a class="nav-link position-relative hov" href="#">درباره ما</a>
+            <span class="nav-item mr-auto">
+              <i class="fa fa-user-o ml-2" aria-hidden="true"></i>
+            </span>
+            <a class="nav-link p-1" href="#">ورود</a>
+            <span class="nav-item p-1">/</span>
+            <a class="nav-link p-1" href="#">ثبت نام</a>
+          </nav>
+        </div>
+
+        <div
+          id="landing-content"
+          class="d-flex flex-column flex-fill align-items-center justify-content-center"
+        >
+          <span id="title-1">
+            خودآموزی، کسب تجربه، ورود به بازار کار با تاپ لرن
+          </span>
+          <span id="title-2">
+            با کمترینــــــــــــ هزینه خودت حرفه‌ایــــــــــــ یاد بگیـر
+          </span>
+
+          <div id="landing-search">
+            <div id="landing-search-container">
+              <form method="get" action="">
+                <div class="d-flex flex-row">
+                  <input
+                    type="text"
+                    name="Search"
+                    placeholder=" چی می‌خوای یاد بگیری؟ "
+                    class="flex-fill"
+                  />
+                  <button>
+                    <i
+                      class="fa fa-search search-icon pl-2 pr-2"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div
+            id="landing-stats"
+            class="d-flex flex-row justify-content-around w-100 text-white"
+          >
+            <div class="d-flex flex-row align-items-center">
+              <span style="padding-bottom: 34px; margin-left: -28px; min-width: 55px;">۱۲۰۱۰۳</span>
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="w-100"
+                  src="./assets/img/stat-time.svg"
+                  alt="time"
+                />
+                <span>دقیقه آموزش</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <span style="padding-bottom: 34px; margin-left: -28px; min-width: 55px;">۹۱</span>
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="w-100"
+                  src="./assets/img/stat-teacher.svg"
+                  alt="teacher"
+                />
+                <span>مدرس مجرب</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <span style="padding-bottom: 34px; margin-left: -28px; min-width: 55px;">۱۰۳۴۵۳</span>
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="w-100"
+                  src="./assets/img/stat-student.svg"
+                  alt="student"
+                />
+                <span>نفر دانشجو</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
