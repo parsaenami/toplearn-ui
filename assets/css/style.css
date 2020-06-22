@@ -135,7 +135,7 @@ input {
 
 .dropdown:hover > .dropdown-menu {
   display: block;
-  margin: 0.6rem 0 0;
+  /* margin: 0.6rem 0 0; */
 }
 
 .dropdown > .dropdown-toggle:active {
