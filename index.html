@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./assets/css/reset.local.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
-    <script src="./assets/js/sample.js"></script>
+    <script src="./assets/js/responsive.js"></script>
     <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
 
@@ -28,7 +28,6 @@
       <div
         id="landing-container"
         class="d-flex flex-column justify-content-center align-items-center"
-        style="max-width: 1170px;"
       >
         <div
           id="landing-header"
@@ -36,12 +35,28 @@
         >
           <nav class="navbar navbar-expand-sm p-0 w-100">
             <a class="navbar-brand" href="#">
-              <img
-                src="./assets/img/logo.svg"
-                alt="Logo"
-                style="width: 75px;"
-              />
+              <img src="./assets/img/logo.svg" alt="Logo" id="landing-logo" />
             </a>
+            <a class="nav-item p-1 position-relative resp" href="#">
+              <i
+                class="fa fa-bars"
+                aria-hidden="true"
+                style="font-size: 19px;"
+              ></i>
+            </a>
+            <span
+              class="nav-item p-1 resp"
+              style="font-weight: 100; opacity: 0.5;"
+              >|</span
+            >
+            <span class="nav-item p-1 resp">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+            <span
+              class="nav-item p-1 resp"
+              style="font-weight: 100; opacity: 0.5;"
+              >|</span
+            >
             <a class="nav-link position-relative hov" href="#">آخرین دوره‌ها</a>
             <a class="nav-link position-relative hov" href="#">معرفی مدرسین</a>
             <a class="nav-link position-relative hov" href="#">بلاگ</a>
@@ -51,8 +66,8 @@
             >
             <a class="nav-link position-relative hov" href="#">تماس با ما</a>
             <a class="nav-link position-relative hov" href="#">درباره ما</a>
-            <span class="nav-item mr-auto">
-              <i class="fa fa-user-o ml-2" aria-hidden="true"></i>
+            <span class="nav-item p-1 mr-auto" id="auth">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
             </span>
             <a class="nav-link p-1" href="#">ورود</a>
             <span class="nav-item p-1">/</span>
@@ -302,9 +317,9 @@
       </ul>
     </div>
     <section id="last-courses">
-      <div class="d-flex flex-row heading">
+      <div class="d-sm-flex flex-sm-row heading">
         <h2>آخرین دوره‌های تاپ لرن</h2>
-        <a href="#" class="mr-auto custom-a">
+        <a href="#" class="mr-auto custom-a" style="padding-right: 45px;">
           مشاهده‌ی همه‌ی دوره‌ها
           <i
             class="fa fa-arrow-left"
@@ -659,5 +674,620 @@
         </div>
       </div>
     </section>
+
+    <section id="suggested-courses">
+      <div class="d-flex flex-row heading">
+        <h2>دوره‌های پیشنهادی تاپ لرن</h2>
+        <div class="swiper d-flex align-items-center justify-content-center mr-auto">
+          <div class="swipe-tile active"></div>
+          <div class="swipe-tile"></div>
+          <div class="swipe-tile"></div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap">
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/kotlin.png" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش بازی‌سازی اندروید با کاتلین
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  عبدی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                1192
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                14
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                1:38:00
+              </div>
+              <div class="info-tile price free">
+                رایگانــــ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core 3 پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog-posts"></section>
+
+    <section id="fav-courses">
+      <div class="d-flex flex-row heading">
+        <h2>دوره‌های محبوب تاپ لرن</h2>
+      </div>
+      <div class="d-flex flex-wrap">
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/kotlin.png" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش بازی‌سازی اندروید با کاتلین
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  عبدی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                1192
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                14
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                1:38:00
+              </div>
+              <div class="info-tile price free">
+                رایگانــــ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/kotlin.png" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش بازی‌سازی اندروید با کاتلین
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  عبدی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                1192
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                14
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                1:38:00
+              </div>
+              <div class="info-tile price free">
+                رایگانــــ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/kotlin.png" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش بازی‌سازی اندروید با کاتلین
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  عبدی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                1192
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                14
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                1:38:00
+              </div>
+              <div class="info-tile price free">
+                رایگانــــ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/kotlin.png" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش بازی‌سازی اندروید با کاتلین
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  عبدی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                1192
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                14
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                1:38:00
+              </div>
+              <div class="info-tile price free">
+                رایگانــــ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="d-flex flex-column course-card">
+            <a href="#" class="course-top">
+              <img src="./assets/img/dotnetcore.jpg" alt="kotlin" />
+              <img src="./assets/img/more.svg" alt="more" class="more" />
+              <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="custom-a course-info title">
+              آموزش Asp .Net Core 3 پروژه محور
+            </a>
+            <div
+              class="course-info d-flex flex-row"
+              style="border-bottom: 2px solid #eaeff2;"
+            >
+              <div class="info-tile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">
+                  مدائنی
+                </a>
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                15144
+              </div>
+              <div class="info-tile">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                1
+              </div>
+            </div>
+            <div
+              class="course-info d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="info-tile time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                6:11:00
+              </div>
+              <div class="info-tile price">
+                320,000 تومان
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="d-flex flex-column">
+      <div class="contact d-flex justify-content-center">
+        <div id="contact-container" class="d-flex">
+          <div class="newsletter-form flex-fill">
+            <form id="newsletterForm" action="/NewsLetter" method="post">
+              <div id="form-container" class="d-flex">
+                <div class="align-items-center d-flex input-layer flex-fill">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <input
+                    class="w-100"
+                    type="text"
+                    placeholder="شماره موبایل شما "
+                    id="Mobile"
+                    name="Mobile"
+                    value=""
+                  />
+                </div>
+                <div class="align-items-center d-flex input-layer flex-fill">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <input
+                    class="w-100"
+                    type="email"
+                    placeholder="پست الکترونیکی شما "
+                    id="Email"
+                    name="Email"
+                    value=""
+                  />
+                </div>
+                <button>عضویت در خبرنامه</button>
+              </div>
+              <input
+                name="__RequestVerificationToken"
+                type="hidden"
+                value="CfDJ8ChGWi1qCgVKtcV4ym9_4x7TpmLzYVkb-wP5vFMgT__1ey2dhPvoLvZctj2X5hdinPyou0_-uLn1RgWhqk5_QD36kxCJvzachaDvTjZKYmbBhKJPZx4qHzKH4joeuE0yt0wweRBz1UaqekKLd1Mu5xk"
+              />
+            </form>
+          </div>
+
+          <div class="d-flex">
+            <div class="namad"></div>
+            <div class="namad"></div>
+          </div>
+        </div>
+      </div>
+      <div class="site-map">
+        <div id="map-container">
+          <ul>
+            <li class="footer-tile"><a href="#">Matlab</a></li>
+            <li class="footer-tile"><a href="#">Dart</a></li>
+            <li class="footer-tile"><a href="#">VueJs</a></li>
+            <li class="footer-tile"><a href="#">امنیت</a></li>
+            <li class="footer-tile"><a href="#">Ionic</a></li>
+            <li class="footer-tile"><a href="#">گرافیک</a></li>
+            <li class="footer-tile"><a href="#">مهارت</a></li>
+            <li class="footer-tile"><a href="#">Scratch</a></li>
+            <li class="footer-tile"><a href="#">Adobe</a></li>
+            <li class="footer-tile"><a href="#">سیستم عامل</a></li>
+            <li class="footer-tile"><a href="#">C</a></li>
+            <li class="footer-tile"><a href="#">انیمیشن سازی</a></li>
+            <li class="footer-tile"><a href="#">Java</a></li>
+            <li class="footer-tile"><a href="#">Cinema 4D</a></li>
+            <li class="footer-tile"><a href="#">Flutter</a></li>
+            <li class="footer-tile"><a href="#">PWA</a></li>
+            <li class="footer-tile"><a href="#">Excel</a></li>
+            <li class="footer-tile">
+              <a href="#"> برنامه نویسی تحت ویندوز </a>
+            </li>
+            <li class="footer-tile"><a href="#">تولید محتوا</a></li>
+            <li class="footer-tile"><a href="#">واقعیت افزودن</a></li>
+            <li class="footer-tile"><a href="#">Stylus</a></li>
+            <li class="footer-tile"><a href="#">NodeJs</a></li>
+            <li class="footer-tile"><a href="#">Cordova</a></li>
+            <li class="footer-tile"><a href="#">اینترنت</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="footer-base"></div>
+    </footer>
   </body>
 </html>
